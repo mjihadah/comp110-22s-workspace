@@ -18,7 +18,17 @@ while i < len(user_guess):
     if user_guess[i] == secret[i]:
         emoji = emoji + GREEN_BOX
     else:
-        emoji = emoji + WHITE_BOX
+        exists = False
+        alt: int = 0
+        while not exists and alt < len(user_guess):
+            if user_guess[i] == secret[alt]:
+                exists = True
+            else:
+                alt += 1
+        if exists:
+            emoji = emoji + YELLOW_BOX
+        else:
+            emoji = emoji + WHITE_BOX
     i = i + 1
 print(emoji)
 

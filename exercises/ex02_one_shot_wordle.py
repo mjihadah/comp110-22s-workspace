@@ -9,16 +9,17 @@ YELLOW_BOX: str = "\U0001F7E8"
 secret: str = "python"
 user_guess: str = input(f"What is your {len(secret)}-letter guess? ")
 i: int = 0
-emoji: str = " "
+emoji: str = ""
 
 while len(user_guess) != len(secret):
     user_guess = input(f"That was not {len(secret)} letters! Try again: ")
-    while i < len(user_guess):
-        if user_guess[i] == secret[i]:
-            print(emoji + GREEN_BOX)
-        else:
-            print(emoji + WHITE_BOX)
-        i = i + 1
+
+while i < len(user_guess):
+    if user_guess[i] == secret[i]:
+        emoji = emoji + GREEN_BOX
+    else:
+        emoji = emoji + WHITE_BOX
+    i = i + 1
 print(emoji)
 
 if user_guess != secret:

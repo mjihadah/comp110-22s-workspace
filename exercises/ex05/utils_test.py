@@ -35,10 +35,10 @@ def test_sub_negative() -> None:
     assert sub(a_list, -5, 3) == [10, 20, 30]
 
 
-def test_sub_zero() -> None:
-    """Testing the sub function when there is an end index of zero."""
-    a_list: list = [10, 20, 30, 40]
-    assert sub(a_list, 1, 0) == []
+def test_sub_greatlen() -> None:
+    """Testing the sub function when there is an end index greater than the length of the list."""
+    a_list: list[int] = [10, 20, 30, 40]
+    assert sub(a_list, 1, 7) == [10, 20, 30, 40]
 
 
 def test_concat_empty() -> None:

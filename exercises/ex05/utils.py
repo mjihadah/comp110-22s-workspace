@@ -39,9 +39,9 @@ def sub(a_list: list[int], start: int, end: int) -> list[int]:
 
 def concat(a: list[int], b: list[int]) -> list[int]:
     """This function will combine two lists."""
-    final_list: list[int] = a
+    final: list[int] = a
 
     for item in b:
-        final_list.append(item)
+        final.append(item)
     
-    return final_list
+    return final

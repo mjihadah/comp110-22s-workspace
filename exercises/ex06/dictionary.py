@@ -13,7 +13,7 @@ def invert(a: dict[str, str]) -> dict[str, str]:
     # How do I assert a KeyError??
 
 
-def favorite_colors(a: dict[str, str]) -> str:
+def favorite_color(a: dict[str, str]) -> str:
     """This function will return the color that appears most frequently in the dictionary."""
     # need to create a dictionary that has [color: # of times]
     score: dict[str, int] = {}

@@ -26,19 +26,19 @@ def test_invert_short() -> None:
     assert invert(exdict) == {"TEN": "ten"}
 
 
-def test_favorite_colors_classex() -> None:
+def test_favorite_color_classex() -> None:
     """Testing the fav color function with the example from class."""
     colors: dict[str, str] = {"Melia": "yellow", "Jalen": "yellow", "Alynn": "Pink"}
     assert favorite_colors(colors) == "yellow"
 
 
-def test_favorite_colors_none() -> None:
+def test_favorite_color_none() -> None:
     """Testing the fav color function when there is no favorite. The first value in the dictionary should be returned."""
     colors: dict[str, str] = {"Melia": 'yellow', "Alynn": 'pink'}
     assert favorite_colors(colors) == "yellow"
 
 
-def test_favorite_colors_one()-> None:
+def test_favorite_color_one()-> None:
     """Testing the fav color function when there's only one color."""
     colors: dict[str,str] = {"Melia": 'yellow'}
     assert favorite_colors(colors) == "yellow"

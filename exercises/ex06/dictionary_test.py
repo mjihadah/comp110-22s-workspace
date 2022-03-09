@@ -2,7 +2,7 @@
 
 __author__ = "703307805"
 
-from dictionary import invert, favorite_colors, count
+from dictionary import invert, favorite_color, count
 
 
 def test_invert_basic() -> None:
@@ -21,7 +21,7 @@ def test_invert_keyerror() -> None:
 
 
 def test_invert_short() -> None:
-    """testing another dctionary"""
+    """Testing another dctionary."""
     exdict: dict[str, str] = {"ten": "TEN"}
     assert invert(exdict) == {"TEN": "ten"}
 
@@ -29,24 +29,24 @@ def test_invert_short() -> None:
 def test_favorite_color_classex() -> None:
     """Testing the fav color function with the example from class."""
     colors: dict[str, str] = {"Melia": "yellow", "Jalen": "yellow", "Alynn": "Pink"}
-    assert favorite_colors(colors) == "yellow"
+    assert favorite_color(colors) == "yellow"
 
 
 def test_favorite_color_none() -> None:
     """Testing the fav color function when there is no favorite. The first value in the dictionary should be returned."""
     colors: dict[str, str] = {"Melia": 'yellow', "Alynn": 'pink'}
-    assert favorite_colors(colors) == "yellow"
+    assert favorite_color(colors) == "yellow"
 
 
-def test_favorite_color_one()-> None:
+def test_favorite_color_one() -> None:
     """Testing the fav color function when there's only one color."""
-    colors: dict[str,str] = {"Melia": 'yellow'}
-    assert favorite_colors(colors) == "yellow"
+    colors: dict[str, str] = {"Melia": 'yellow'}
+    assert favorite_color(colors) == "yellow"
 
 
 def test_count_empty() -> None:
     """Testing count function with an empty list."""
-    exlist: list = []
+    exlist: list[str] = []
     assert count(exlist) == {}
 
 

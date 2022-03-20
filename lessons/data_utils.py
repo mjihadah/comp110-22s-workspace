@@ -40,4 +40,4 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     for column in first_row:
         result[column] = column_values(row_table, column)
 
-    return result
+    return result 

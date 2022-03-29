@@ -102,3 +102,10 @@ def count(input: list[str]) -> dict[str, int]:
             result[item] = 1
     
     return result
+
+
+def percentage(total: int, subset: int) -> float:
+    """This will calculate the percentage given two ints values."""
+    result: float = subset / total * 100.0
+
+    return result
